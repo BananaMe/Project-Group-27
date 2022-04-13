@@ -17,13 +17,13 @@ export const Button = ({ rounded, color, label, ...props }) => {
 
 Button.propTypes = {
   rounded: PropTypes.bool,
-  color: PropTypes.oneOf(['red', 'pink', 'green', 'grey']),
+  color: PropTypes.oneOf(['red', 'pink', 'green', 'grey', 'darkgrey', 'black']),
   label: PropTypes.string,
   onClick: PropTypes.func,
 };
 
 Button.defaultProps = {
   rounded: false,
-  color: 'red',
+  color: 'darkgrey',
   onClick: undefined,
 };

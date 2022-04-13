@@ -19,9 +19,11 @@ Input.propTypes = {
   isLabelTop: PropTypes.bool,
   label: PropTypes.string,
   placeholder: PropTypes.string,
+
 };
 
 Input.defaultProps = {
   isLabelTop: false,
   onClick: undefined,
+  
 };
