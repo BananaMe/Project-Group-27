@@ -36,8 +36,8 @@ export const Header = ({ user, onLogin, onLogout, onCreateAccount }) => (
           </>
         ) : (
           <>
-            <Button size="small" onClick={onLogin} label="Log in" />
-            <Button primary size="small" onClick={onCreateAccount} label="Sign up" />
+            <Button color='red' rounded onClick={onLogin} label="Log in" />
+            <Button color='green' onClick={onCreateAccount} label="Sign up" />
           </>
         )}
       </div>
