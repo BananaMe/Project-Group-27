@@ -4,14 +4,12 @@ import './login-page.css';
 import image from "../../images/kinotekaLogo.JPG";
 import { Button } from '../../atoms/Button/Button';
 import { Input } from '../../atoms/Input/Input';
-import * as Font from "react-icons/bs";
 class LoginPage extends React.Component {
     
 
 render() {
 
     return (
-       
         <div className="container" id="container">
         <div className="form-container sign-in-container">
             <form action="#">
@@ -36,8 +34,7 @@ render() {
             </div>
         </div>
     </div>
-    
-    
+
         
         
 

@@ -1,0 +1,40 @@
+
+
+.a-button--liked{
+    color: deeppink;
+}
+
+.a-button--disliked{
+    color: grey;
+}
+
+.card-movie {
+    border-radius: 5px;
+    width: 25rem;
+    height: 40rem;
+}
+
+.img{
+    background: #181818;
+    border-radius: 5px;
+    margin-top: 0;
+}
+
+h2 {
+    color: #37474F;
+    text-align: left;
+    font-family: Roboto sans-serif;
+    margin-bottom: 5px;
+}
+
+h5{
+    color: #37474F;
+    margin-top: 0;
+    text-align: justify;
+    font-family: Roboto sans-serif;
+}
+
+.description {
+    margin: 4%;
+    background: transparent;
+}
