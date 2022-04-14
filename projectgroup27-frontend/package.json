@@ -62,5 +62,6 @@
     "@storybook/testing-library": "0.0.9",
     "prop-types": "^15.8.1",
     "webpack": "^5.72.0"
-  }
+  },
+  "proxy": "http://localhost:8080"
 }

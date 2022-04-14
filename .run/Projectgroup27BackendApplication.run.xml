@@ -1,0 +1,16 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Projectgroup27BackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+    <option name="ACTIVE_PROFILES" />
+    <module name="projectgroup27-backend" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="mk.ukim.uiktp.projectgroup27backend.Projectgroup27BackendApplication" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="mk.ukim.uiktp.projectgroup27backend.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
