@@ -1,40 +1,55 @@
-
-
-.a-button--liked{
-    color: deeppink;
-}
-
-.a-button--disliked{
-    color: grey;
-}
-
-.card-movie {
+.a-card {
     border-radius: 5px;
     width: 25rem;
     height: 40rem;
+    margin: 10px;
 }
 
-.img{
+.image{
     background: #181818;
     border-radius: 5px;
     margin-top: 0;
 }
 
-h2 {
+.header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+    margin: 20px 10px;
+}
+
+.text {
     color: #37474F;
     text-align: left;
     font-family: Roboto sans-serif;
-    margin-bottom: 5px;
+    margin-right: 20px;
 }
 
-h5{
+.rating {
+    margin-right: 10px;
+}
+
+.favorites {
+    background: transparent;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.favorites svg {
+    font-size: 25px;
+}
+
+.description{
+    margin: 10px;
+    font-size: 13px;
     color: #37474F;
-    margin-top: 0;
     text-align: justify;
     font-family: Roboto sans-serif;
 }
 
-.description {
-    margin: 4%;
-    background: transparent;
+.a-button {
+    width: 100%;
+    margin: 0;
 }

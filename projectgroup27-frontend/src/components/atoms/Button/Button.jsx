@@ -24,6 +24,6 @@ Button.propTypes = {
 
 Button.defaultProps = {
   rounded: false,
-  color: 'darkgrey',
+  color: 'pink',
   onClick: undefined,
 };

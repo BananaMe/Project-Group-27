@@ -1,3 +1,43 @@
+.m-header {
+  background: var(--black);
+  color: white;
+  width: 100vw;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-top: -23px;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-left a {
+  margin-left: 30px;
+  font-size: 20px;
+  color: white;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-right span {
+  margin-left: 10px;
+  color: white;
+  font-size: 20px;
+}
+
+.a-button {
+  min-width: 100px;
+  text-transform: capitalize;
+  font-weight: normal;
+}
+
 .wrapper {
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);

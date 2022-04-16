@@ -4,6 +4,7 @@ import './login-page.css';
 import image from "../../images/kinotekaLogo.JPG";
 import { Button } from '../../atoms/Button/Button';
 import { Input } from '../../atoms/Input/Input';
+import {Link} from "react-router-dom";
 class LoginPage extends React.Component {
     
 
@@ -15,13 +16,16 @@ render() {
             <form action="#">
                 <h3>Log In</h3> 
                 <div><br></br><br></br><br></br></div>
-                <Input placeholder={'Enter your Email'} label={'Email'} isLabelTop={true}/>
-                <Input placeholder={'Enter your Password'}  label={'Password'} isLabelTop={true}/>
+                <Input placeholder={'Enter your Email'} label={'Email'} isLabelTop/>
+                <Input placeholder={'Enter your Password'}  label={'Password'} isLabelTop/>
                 <a href="#" style={{font:'Roboto', fontWeight:'bold', fontStyle:"italic", marginTop:'-5px', marginLeft:'240px'}}>Forgot your password?</a>
                 <div><br></br></div>
-                <Button label="Login" rounded={true}/>
-                <div><br></br></div>
-                <Button label="Register" rounded={true} onClick={event => window.location.href='/register'}/>
+                <Link to={'/homepage'}>
+                    <Button label="Login" rounded color={"black"}/>
+                </Link>
+                <Link to={'/register'}>
+                    <Button label="Register" rounded color={"grey"} />
+                </Link>
             </form>
         </div>
         <div className="overlay-container">
@@ -29,7 +33,6 @@ render() {
                 <div className="overlay-panel overlay-right">
                 <img src={image} alt="Logo" style={{ width: '70%', marginTop:'-50px'}} />
                     <p style={{font:'Roboto', fontWeight:'bold', fontStyle:"italic"}}>"I'm gonna make him an offer he can't refuse." The Godfather (1972)</p>
-                    
                 </div>
             </div>
         </div>

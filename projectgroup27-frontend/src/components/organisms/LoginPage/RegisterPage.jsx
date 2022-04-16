@@ -4,7 +4,6 @@ import "./login-page.css";
 import image from "../../images/kinotekaLogo.JPG";
 import { Button } from "../../atoms/Button/Button";
 import { Input } from "../../atoms/Input/Input";
-import * as BSIcons from "react-icons/bs";
 
 class RegisterPage extends React.Component {
   render() {
@@ -12,39 +11,40 @@ class RegisterPage extends React.Component {
       <div className="container" id="container">
         <div className="form-container sign-in-container">
           <form action="#">
-            <h3 style={{marginTop:'-30px'}}>Register</h3>
-            <div>
-              <br></br>
-              
+            <h3>Register</h3>
+            <div className="wrapper-credentials">
+              <Input
+                placeholder={"Enter your First Name"}
+                label={"First Name"}
+                isLabelTop
+              />
+              <Input
+                placeholder={"Enter your Last Name"}
+                label={"Last Name"}
+                isLabelTop
+              />
             </div>
             <Input
-              placeholder={"Enter your First Name"}
-             
-             
-            />
-            <Input
-              placeholder={"Enter your Last Name"}
-              
-            />
-            <Input
               placeholder={"Enter your Email"}
-              
-             
+              label={"Email"}
+              isLabelTop
             />
             <Input
               placeholder={"Enter your Password"}
-             
+              label={"Password"}
+              isLabelTop
             />
             <Input
               placeholder={"Confirm your Password"}
-              
+              label={"Confirm Password"}
+              isLabelTop
             />
             <div>
               <br/><br/><br/>
             </div>
             <div className="row">
               <div className="col-6">
-                <Button label="Create Account" rounded={true} onClick={event => window.location.href='/'}/>
+                <Button label="Create Account" rounded color={'grey'} onClick={event => window.location.href='/'}/>
               </div>
               
             </div>

@@ -10,34 +10,48 @@ body {
     flex-direction: column;
     height: 100vh;
 }
-h1 {
+.title {
     margin-top: 10px;
     margin-bottom: 2px;
+    font-size: 35px;
 }
 
 .text {
-    font-size: 20px;
+    font-size: 26px;
     margin-bottom: 30px;
 }
 
 .welcome-text {
     position: absolute;
+    text-align-last: center;
     font-family: 'Roboto', sans-serif;
     background-color: transparent;
-    width: 50vh;
-    height: 20vh;
-    display: inline-block;
     z-index: 100;
-    top: 35%;
-    left: 40%;
+    margin-top: 170px;
+    top: 27%;
+    left: 51%;
+    display: block;
+    width: 750px;
+    height: 417px;
+    margin-left: -375px; /* HALF OF THE WIDTH */
 }
 
-.button {
-    margin-bottom: 30px;
+.a-button {
+    height: 36px;
 }
 
-.img{
+.img {
     background: #181818;
     min-width: 100%;
-    margin-top: 3px;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-top: 90px;
+}
+
+.img img {
+    height: 100vh;
+    object-fit: cover;
 }
