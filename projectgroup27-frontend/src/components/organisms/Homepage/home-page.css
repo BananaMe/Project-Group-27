@@ -40,17 +40,6 @@ body {
     height: 36px;
 }
 
-.img {
-    background: #181818;
-    min-width: 100%;
-    width: 100vw;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    margin-top: 90px;
-}
-
 .img img {
     height: 100vh;
     object-fit: cover;

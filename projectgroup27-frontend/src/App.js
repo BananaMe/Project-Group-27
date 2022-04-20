@@ -12,13 +12,23 @@ import {
 import {Header} from "./components/molecules/Header/Header";
 import React from "react";
 import AllMovies from "./components/organisms/AllMovies/AllMovies";
+import Favorites from "./components/organisms/Favorites/Favorites";
 
 function App() {
   const [user, setUser] = React.useState();
 
   return (
     <Router>
-    <div className="App" style={{backgroundColor: 'var(--beige)'}}>
+    <div className="App" style={{
+      backgroundColor: 'var(--beige)',
+      width: "100vw",
+      height:'100vh',
+      position:'relative',
+      left:'50%',
+      right:'50%',
+      marginLeft:'-50vw',
+      marginRight:'-50vw'
+    }}>
       {
         !(window.location.href.endsWith('/') ||
         window.location.href.endsWith('/register'))
@@ -38,6 +48,7 @@ function App() {
               <Route path="/sign-in" element={<LoginPage/>}  />
               <Route path="/homepage" element={<HomePage/>}  />
               <Route path="/all-movies" element={<AllMovies/>} />
+              <Route path="/favorites" element={<Favorites/>} />
       </Routes>
     </div>
   </Router>

@@ -15,7 +15,7 @@ export const Header = ({ user, onLogin, onLogout, onCreateAccount }) => (
         <img src={image} style={{width: "150px"}}/>
         <a href={'/all-movies'}>All movies</a>
         <a>Categories</a>
-        <a>Favorites</a>
+        <a href={'/favorites'}>Favorites</a>
       </div>
       <div className="nav-right">
         {user ? (
