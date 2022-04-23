@@ -17,6 +17,7 @@
     justify-content: space-between;
     font-size: 25px;
     margin: 20px 10px;
+    height: 10vh;
 }
 
 .text {
@@ -30,15 +31,16 @@
     margin-right: 10px;
 }
 
-.favorites {
+.favorites_card {
     background: transparent;
     border: 0;
-    margin: 0;
     padding: 0;
     cursor: pointer;
+    display: inline-flex;
+    margin-top: 23px;
 }
 
-.favorites svg {
+.favorites_card svg {
     font-size: 25px;
 }
 

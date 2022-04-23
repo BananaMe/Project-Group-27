@@ -27,12 +27,11 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: transparent;
     z-index: 100;
-    margin-top: 170px;
-    top: 27%;
-    left: 51%;
+    top: 37%;
+    left: 63%;
     display: block;
-    width: 750px;
-    height: 417px;
+    width: 400px;
+    height: 150px;
     margin-left: -375px; /* HALF OF THE WIDTH */
 }
 
@@ -42,5 +41,6 @@ body {
 
 .img img {
     height: 100vh;
+    width: 100vw;
     object-fit: cover;
 }

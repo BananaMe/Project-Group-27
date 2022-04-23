@@ -46,7 +46,7 @@ export const Card = ({image, title, desc, rating, isLiked, button, isFavorites, 
 								<span className="rating">{rating}</span>
 								<FaStar color="var(--pink)"/>
 							</div>
-							<button className="favorites">
+							<button className="favorites_card">
 								<FaHeart color={`var(--${color})`}/>
 							</button>
 						</div>
