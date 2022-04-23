@@ -26,7 +26,7 @@ export const Card = ({image, title, desc, rating, isLiked, button, isFavorites, 
 								label="VIEW DETAILS"
 								rounded
 								color={"pink"}
-								onClick={event => window.location.href = '/'}
+								onClick={event => window.location.href = '/details'}
 							/>
 							<Button
 								label="REMOVE FROM FAVORITES"
@@ -57,7 +57,7 @@ export const Card = ({image, title, desc, rating, isLiked, button, isFavorites, 
 						<Button
 							label="MORE"
 							color={"green"}
-							onClick={event => window.location.href = '/'}
+							onClick={event => window.location.href = '/details'}
 						/>
 					</>
 				)

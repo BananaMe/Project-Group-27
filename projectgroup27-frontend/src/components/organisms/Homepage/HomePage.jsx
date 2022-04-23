@@ -16,7 +16,7 @@ class HomePage extends React.Component {
                         <Button
                             label="LETS EXPLORE"
                             rounded={true} color={"red"}
-                            onClick={event => window.location.href = '/'}
+                            onClick={event => window.location.href = '/all-movies'}
                             style={{minWidth: "190px", width: "auto"}}
                         />
                     </div>

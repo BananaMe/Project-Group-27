@@ -1,0 +1,31 @@
+#slika1{
+    margin-top: 200px;
+    margin-left: -50px;
+    width: 500px; 
+    height: 370px;
+}
+
+#outer
+{
+    width:100%;
+    margin-left: -430px;
+}
+.inner
+{
+    display: inline-block;
+}
+#btnDef{
+    min-width: 150px;
+    width: auto;
+    cursor: default;
+}
+#description, #director, #writers, #stars{
+    color: #181818;
+    float: left;
+    padding-left: 290px;
+}
+#btnBack{
+    width: 300px;
+    cursor: pointer;
+    margin-left: -350px;
+}

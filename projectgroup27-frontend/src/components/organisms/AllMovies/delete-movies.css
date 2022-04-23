@@ -1,0 +1,64 @@
+#img1 {
+        width: 400px; 
+        margin-right: 50%;
+        margin-top: 15%;
+        height: 200px;
+}
+
+#img2 {
+    width: 400px; 
+    margin-right: 50%;
+    margin-top: 10%;
+    height: 200px;
+}
+
+.content {
+    margin-left: -10%;
+    margin-top: -11%;
+}
+
+#btnDelete, #btnEdit{
+    margin-right:-100px;
+    margin-left: 100px;
+    min-width: 220px;
+    width: auto;
+    cursor: pointer;
+
+}
+
+.popup-box {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.5); 
+    width: 100%;
+    height: 100vh;
+}
+
+.box {
+    position: relative;
+    width: 50%;
+    min-height: 300px;
+    background-color: #F7F5EC;
+    border: 1px solid #999;
+    border-radius: 4px;
+    margin: 20px auto;
+    margin-top: 200px;
+    padding: 20px;
+    overflow: auto;
+}
+
+#btnCancel{
+    min-width: 150px;
+    width: auto;
+    cursor: pointer;
+    margin-left: 210px;
+    margin-right: 10px;
+}
+
+#btnDelete2{
+    min-width: 150px;
+    width: auto;
+    cursor: pointer;
+}
+
