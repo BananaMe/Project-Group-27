@@ -27,7 +27,7 @@
 }
 
 .popup-box {
-    position: fixed;
+    position: absolute;
     left: 0;
     top: 0;
     background-color: rgba(0,0,0,0.5); 
@@ -61,4 +61,31 @@
     width: auto;
     cursor: pointer;
 }
+
+.add-icon{
+    right: 70px;
+    position: fixed;
+    bottom: 20px;
+}
+
+.delete-movies{
+    overflow: auto;
+    position: relative;
+}
+
+#add-movie{
+    min-width: 150px;
+    width: auto;
+    cursor: pointer;
+}
+
+.input-AddMovie{
+    font-size: 20px;
+    margin: 5px 5px 40px 40px;
+}
+
+.input-movie11{
+
+}
+
 
