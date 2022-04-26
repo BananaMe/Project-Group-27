@@ -71,7 +71,7 @@ class DeleteMovies extends React.Component {
                             overlayClassName: "overlay-custom-class-name",
                         })
                 }/>&nbsp;&nbsp;&nbsp;
-                <Button id="btnEdit" rounded={true} label={"EDIT"} color={"green"}/>
+                <Button id="btnEdit" rounded={true} label={"EDIT"} color={"green"} onClick={event => window.location.href = '/editMovie'}/>
 
                 <div className='imgBx'>
                     <img
@@ -125,7 +125,7 @@ class DeleteMovies extends React.Component {
                             overlayClassName: "overlay-custom-class-name",
                         })
                 }/>&nbsp;&nbsp;&nbsp;
-                <Button id="btnEdit" rounded={true} label={"EDIT"} color={"green"}/>
+                <Button id="btnEdit" rounded={true} label={"EDIT"} color={"green"} onClick={event => window.location.href = '/editMovie'}/>
                 <br/><br/>
 
 
@@ -138,12 +138,14 @@ class DeleteMovies extends React.Component {
                                         <div className='popup-box'>
                                             <div className='box'>
                                                 <h3 style={{textAlign: 'center', fontSize: "35px"}}>Add new movie</h3>
-                                                <div className="input-AddMovie" style={{width: '70%',textAlign: 'center'}}>
+                                                <div className="input-AddMovie" style={{width: '90%',textAlign: 'center'}}>
                                                     <Input label="Description"/>
                                                     <Input label="Director"/>
                                                     <Input label="Writers"/>
                                                     <Input label="Stars"/>
-                                                    <Select options={options} />
+                                                    <Input label="TrailerURL"/>
+                                                    <Input label="Image"/>
+                                                    <Select options={options}/>
                                                 </div>
                                                 <Button
                                                     id="btnCancel"

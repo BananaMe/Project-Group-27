@@ -15,6 +15,7 @@
   import Favorites from "./components/organisms/Favorites/Favorites";
   import MovieDetails from "./components/organisms/MovieDetails/MovieDetails";
   import DeleteMovies from "./components/organisms/AllMovies/DeleteMovies";
+  import EditMovie from "./components/organisms/AllMovies/EditMovie";
 
   function App() {
     const [user, setUser] = React.useState();
@@ -53,6 +54,7 @@
                 <Route path="/favorites" element={<Favorites/>} />
                 <Route path="/details" element={<MovieDetails/>}/>
                 <Route path="/deleteMovie-admin" element={<DeleteMovies/>}/>
+                <Route path="/editMovie" element={<EditMovie/>}/>
         </Routes>
       </div>
     </Router>
