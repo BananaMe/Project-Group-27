@@ -8,6 +8,9 @@ import "react-confirm-alert/src/react-confirm-alert.css";
 import {Input} from "../../atoms/Input/Input";
 import Select from 'react-select';
 import {FormControl, FormGroup, FormLabel} from 'react-bootstrap';
+import {Card, CardBody} from "reactstrap";
+import CardHeader from "@material-ui/core/CardHeader";
+import {Link} from "react-router-dom";
 
 class DeleteMovies extends React.Component {
     render() {
@@ -42,14 +45,14 @@ class DeleteMovies extends React.Component {
                                                 movie?</h3>
                                             <br/><br/>
                                             <Button
-                                                id="btnCancel"
+                                                className="btn btnCancel"
                                                 label="CANCEL"
                                                 rounded={true} color={"pink"}
                                                 onClick={event => window.location.href = '/deleteMovie-admin'}
 
                                             />
                                             <Button
-                                                id="btnDelete2"
+                                                className="btn btnDelete2"
                                                 label="DELETE"
                                                 rounded={true} color={"red"}
                                             />
@@ -96,14 +99,14 @@ class DeleteMovies extends React.Component {
                                                 movie?</h3>
                                             <br/><br/>
                                             <Button
-                                                id="btnCancel"
+                                                className="btn btnCancel"
                                                 label="CANCEL"
                                                 rounded={true} color={"pink"}
                                                 onClick={event => window.location.href = '/deleteMovie-admin'}
 
                                             />
                                             <Button
-                                                id="btnDelete2"
+                                                className="btn btnDelete2"
                                                 label="DELETE"
                                                 rounded={true} color={"red"}
                                             />

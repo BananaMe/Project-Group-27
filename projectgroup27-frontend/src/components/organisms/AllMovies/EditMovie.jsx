@@ -66,7 +66,7 @@ class EditMovie extends React.Component {
                         onClick={event => window.location.href = '/all-movies'}
                         id="btnBack"
                         label="SAVE"
-                        rounded={true} color={"red"}
+                        rounded={true} color={"green"}
                     />
                 </div>
             </div>

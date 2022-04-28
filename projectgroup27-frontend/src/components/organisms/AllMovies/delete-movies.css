@@ -43,24 +43,49 @@
     border: 1px solid #999;
     border-radius: 4px;
     margin: 20px auto;
-    margin-top: 50px;
+    margin-top: 100px;
     padding: 20px;
     overflow: auto;
 }
 
-#btnCancel{
-    min-width: 150px;
-    width: auto;
-    cursor: pointer;
-    margin-left: 210px;
-    margin-right: 10px;
+.btnCancel {
+    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        border: 0;
+        cursor: pointer;
+        display: inline-block;
+        line-height: 1;
+        height: 40px;
+        min-width: 170px;
+        font-size: 14px;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-left: 270px;
+        background-color: #ECAE84;
+        margin-top: 10px;
+        border-radius: 100px;
+        margin-right: 35px;
 }
 
-#btnDelete2{
-    min-width: 150px;
-    width: auto;
-    cursor: pointer;
+.btnDelete2{
+         font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        border: 0;
+        cursor: pointer;
+        display: inline-block;
+        line-height: 1;
+        height: 40px;
+        min-width: 170px;
+        font-size: 14px;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-right: 180px;
+        background-color: #D44A4B;
+        margin-top: 10px;
+        border-radius: 100px;
+       
 }
+
 
 .add-icon{
     right: 70px;
