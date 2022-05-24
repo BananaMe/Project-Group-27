@@ -52,4 +52,18 @@ public class MoviesRestController {
             return ResponseEntity.ok().build();
         return ResponseEntity.badRequest().build();
     }
+
+    @PostMapping("/{movieId}")
+    public ResponseEntity<Void> addToFavorites(@PathVariable Long movieId, @RequestParam String user) {
+        this.movieService.addToFavorites(movieId, user);
+
+        return ResponseEntity.noContent().build();
+    }
+
+    @PostMapping("/favorites/{username}")
+    public ResponseEntity<List<Movie>> getFavorites(@PathVariable String username) {
+        this.movieService.getFavorites(username);
+
+        return ResponseEntity.noContent().build();
+    }
 }

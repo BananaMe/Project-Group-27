@@ -17,4 +17,7 @@ public interface MovieService {
 
     void deleteById(Long id);
 
+    void addToFavorites(Long movieId, String username);
+
+    List<Movie> getFavorites(String username);
 }

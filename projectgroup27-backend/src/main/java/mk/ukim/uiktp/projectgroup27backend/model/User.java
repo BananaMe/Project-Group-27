@@ -10,7 +10,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
@@ -45,8 +44,8 @@ public class User implements UserDetails, Serializable {
         this.lastName = userDto.getLastName();
     }
 
-    @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
-    private List<FavoriteMovies> favoriteMovies = Collections.emptyList();
+    @OneToMany(fetch = FetchType.EAGER)
+    private List<Movie> favoriteMovies = Collections.emptyList();
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

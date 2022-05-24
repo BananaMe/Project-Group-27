@@ -2,10 +2,12 @@ package mk.ukim.uiktp.projectgroup27backend.services.impl;
 
 import mk.ukim.uiktp.projectgroup27backend.model.Category;
 import mk.ukim.uiktp.projectgroup27backend.model.Movie;
+import mk.ukim.uiktp.projectgroup27backend.model.User;
 import mk.ukim.uiktp.projectgroup27backend.model.dto.MovieDto;
 import mk.ukim.uiktp.projectgroup27backend.model.exceptions.MovieNotFoundException;
 import mk.ukim.uiktp.projectgroup27backend.repository.CategoryRepository;
 import mk.ukim.uiktp.projectgroup27backend.repository.MovieRepository;
+import mk.ukim.uiktp.projectgroup27backend.repository.UserRepository;
 import mk.ukim.uiktp.projectgroup27backend.services.MovieService;
 import org.springframework.stereotype.Service;
 
@@ -17,10 +19,12 @@ public class MovieServiceImpl implements MovieService {
 
     private final MovieRepository movieRepository;
     private final CategoryRepository categoryRepository;
+    private final UserRepository userRepository;
 
-    public MovieServiceImpl(MovieRepository movieRepository, CategoryRepository categoryRepository) {
+    public MovieServiceImpl(MovieRepository movieRepository, CategoryRepository categoryRepository, UserRepository userRepository) {
         this.movieRepository = movieRepository;
         this.categoryRepository = categoryRepository;
+        this.userRepository = userRepository;
     }
 
 
@@ -66,5 +70,21 @@ public class MovieServiceImpl implements MovieService {
         Movie movie = this.movieRepository.findById(id)
                 .orElseThrow(() -> new MovieNotFoundException(id));
         this.movieRepository.delete(movie);
+    }
+
+    @Override
+    public void addToFavorites(Long movieId, String username) {
+        Movie movie = this.movieRepository.findById(movieId)
+                .orElseThrow(() -> new MovieNotFoundException(movieId));
+        User user = this.userRepository.findByUsername(username);
+        user.getFavoriteMovies().add(movie);
+        this.userRepository.save(user);
+    }
+
+    @Override
+    public List<Movie> getFavorites(String username) {
+        User user = this.userRepository.findByUsername(username);
+
+        return user.getFavoriteMovies();
     }
 }
