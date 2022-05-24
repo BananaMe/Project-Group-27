@@ -60,9 +60,16 @@ public class MoviesRestController {
         return ResponseEntity.noContent().build();
     }
 
-    @GetMapping("/favorites/{username}")
-    public ResponseEntity<List<Movie>> getFavorites(@PathVariable String username) {
+    @GetMapping("/favorites")
+    public ResponseEntity<List<Movie>> getFavorites(@RequestParam String username) {
 
         return ResponseEntity.ok(this.movieService.getFavorites(username));
+    }
+
+    @DeleteMapping("/favorites/{movieId}")
+    public ResponseEntity<Void> deleteMovieFromFavorites(@PathVariable Long movieId, @RequestParam String username) {
+
+        this.movieService.removeMovieFromFavorites(movieId, username);
+        return ResponseEntity.noContent().build();
     }
 }

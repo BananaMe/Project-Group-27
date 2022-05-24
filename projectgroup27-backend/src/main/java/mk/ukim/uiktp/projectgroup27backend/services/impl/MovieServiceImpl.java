@@ -87,4 +87,12 @@ public class MovieServiceImpl implements MovieService {
 
         return user.getFavoriteMovies();
     }
+
+    @Override
+    public void removeMovieFromFavorites(Long movieId, String username) {
+        User user = this.userRepository.findByUsername(username);
+
+        user.getFavoriteMovies().removeIf(movie -> movie.getId().equals(movieId));
+        userRepository.save(user);
+    }
 }

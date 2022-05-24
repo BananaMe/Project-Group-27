@@ -36,12 +36,15 @@ public class User implements UserDetails, Serializable {
 
     private String password;
 
+    String role;
+
     public User(UserDto userDto) {
         this.username = userDto.getUsername();
         this.password = userDto.getPassword();
         this.email = userDto.getEmail();
         this.firstName = userDto.getFirstName();
         this.lastName = userDto.getLastName();
+        this.role = userDto.getRole();
     }
 
     @OneToMany(fetch = FetchType.EAGER)

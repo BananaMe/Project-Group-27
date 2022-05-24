@@ -20,4 +20,6 @@ public interface MovieService {
     void addToFavorites(Long movieId, String username);
 
     List<Movie> getFavorites(String username);
+
+    void removeMovieFromFavorites(Long movieId, String username);
 }
