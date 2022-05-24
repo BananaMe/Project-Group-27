@@ -6,11 +6,14 @@ import mk.ukim.uiktp.projectgroup27backend.model.dto.MovieDto;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 public interface MovieService {
     List<Movie> findAll();
+    List<Movie> findByCategories(List<Long> categoryIds);
     Optional<Movie> findById(Long id);
     Optional<Movie> findByName(String name);
+
 
     Optional<Movie> save(MovieDto movieDto);
     Optional<Movie> edit(Long id, MovieDto movieDto);

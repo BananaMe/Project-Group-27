@@ -7,7 +7,9 @@ import mk.ukim.uiktp.projectgroup27backend.services.MovieService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @RestController
 @RequestMapping("/api/movies")
@@ -20,7 +22,10 @@ public class MoviesRestController {
     }
 
     @GetMapping
-    public List<Movie> getAllMovies(){
+    public List<Movie> getAllMovies(@RequestParam(required = false) List<Long> categoryIds){
+        if(categoryIds != null){
+            return movieService.findByCategories(categoryIds);
+        }
         return movieService.findAll();
     }
 

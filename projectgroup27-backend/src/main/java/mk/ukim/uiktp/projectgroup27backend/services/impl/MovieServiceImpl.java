@@ -11,8 +11,7 @@ import mk.ukim.uiktp.projectgroup27backend.repository.UserRepository;
 import mk.ukim.uiktp.projectgroup27backend.services.MovieService;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 @Service
 public class MovieServiceImpl implements MovieService {
@@ -31,6 +30,19 @@ public class MovieServiceImpl implements MovieService {
     @Override
     public List<Movie> findAll() {
         return this.movieRepository.findAll();
+    }
+
+    @Override
+    public List<Movie> findByCategories(List<Long> categoryIds) {
+        List<Category> categories = categoryRepository.findAllById(categoryIds);
+        List<Movie> movies = this.movieRepository.findAll();
+        List<Movie> filteredMovies = new ArrayList<>();
+        for (Movie m: movies) {
+            if(m.getCategories().containsAll(categories)){
+                filteredMovies.add(m);
+            }
+        }
+        return filteredMovies;
     }
 
     @Override

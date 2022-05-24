@@ -16,7 +16,6 @@ public class AuthenticationController {
     @PostMapping(value = "/register")
     public ResponseEntity<Void> register(@RequestBody UserDto user) {
         userService.registerUser(user);
-
         return ResponseEntity.noContent().build();
     }
 }
