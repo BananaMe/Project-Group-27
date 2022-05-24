@@ -60,10 +60,9 @@ public class MoviesRestController {
         return ResponseEntity.noContent().build();
     }
 
-    @PostMapping("/favorites/{username}")
+    @GetMapping("/favorites/{username}")
     public ResponseEntity<List<Movie>> getFavorites(@PathVariable String username) {
-        this.movieService.getFavorites(username);
 
-        return ResponseEntity.noContent().build();
+        return ResponseEntity.ok(this.movieService.getFavorites(username));
     }
 }
