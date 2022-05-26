@@ -2,8 +2,30 @@ import React from 'react';
 
 import './all-movies.css';
 import {Card} from "../../atoms/Card/Card";
+import filmService from '../../../services/filmService';
 
 class AllMovies extends React.Component {
+
+	state = {
+		films: []
+	};
+
+	//da se dosredi
+	getFilms() {
+		debugger;
+		filmService.listMovies()
+			.then((response) => response.data)
+			.then((data) => {
+			  this.setState({
+				films: data,
+			  });
+			});
+	  }
+	
+	  async componentDidMount() {
+		  await this.getFilms();
+	  }
+
 	render() {
 		return (
 			<div className="all-movies">

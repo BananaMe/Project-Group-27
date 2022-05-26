@@ -8,7 +8,7 @@ import {FaUser} from "react-icons/fa";
 import './header.css';
 import {Link} from "react-router-dom";
 
-export const Header = ({ user, onLogin, onLogout, onCreateAccount }) => (
+export const Header = ({ loggedUser, onLogin, onLogout, onCreateAccount }) => (
   <header className="m-header">
     <div className="wrapper">
       <div className="nav-left">
@@ -18,11 +18,11 @@ export const Header = ({ user, onLogin, onLogout, onCreateAccount }) => (
         <a href={'/favorites'}>Favorites</a>
       </div>
       <div className="nav-right">
-        {user ? (
+        {loggedUser ? (
           <>
             <FaUser/>
             <span className="welcome">
-              {user.name}
+              {loggedUser}
             </span>
             <Link to={'/'}>
               <Button color="black" onClick={onLogout} label="Log out" />
