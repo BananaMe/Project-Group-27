@@ -5,6 +5,7 @@ import image from "../../images/kinotekaLogo.JPG";
 import { Button } from '../../atoms/Button/Button';
 import { Input } from '../../atoms/Input/Input';
 import {Link} from "react-router-dom";
+
 class LoginPage extends React.Component {
     
 
