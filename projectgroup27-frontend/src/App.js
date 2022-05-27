@@ -18,7 +18,14 @@
   import EditMovie from "./components/organisms/AllMovies/EditMovie";
 
   function App() {
-    const [user, setUser] = React.useState();
+
+    //treba da se vidi zosto ne funkcionira state-ot
+    const [loggedUser, setUser] = React.useState("viktor@gmail.com");
+
+    const loginUser = (email) => {
+      debugger;
+      setUser(email);
+    }
 
     return (
       <Router>
@@ -37,7 +44,7 @@
           window.location.href.endsWith('/register'))
           && (
             <Header
-              user={user}
+              loggedUser={loggedUser}
               onLogin={() => setUser({ name: 'Jane Doe' })}
               onLogout={() => setUser(undefined)}
               onCreateAccount={() => setUser({ name: 'Jane Doe' })}
@@ -47,7 +54,7 @@
 
         <Routes>
                 <Route path='/register' element={<RegisterPage/>} />
-                <Route exact path='/' element={<LoginPage/>}  />
+                <Route exact path='/' element={<LoginPage loginUser={loginUser}/>} />
                 {/* <Route path="/sign-in" element={<LoginPage/>}  /> */}
                 <Route path="/homepage" element={<HomePage/>}  />
                 <Route path="/all-movies" element={<AllMovies/>} />
