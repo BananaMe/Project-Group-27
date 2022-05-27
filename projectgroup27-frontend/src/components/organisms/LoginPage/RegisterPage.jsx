@@ -4,7 +4,6 @@ import "./login-page.css";
 import image from "../../images/kinotekaLogo.JPG";
 import { Button } from "../../atoms/Button/Button";
 import { Input } from "../../atoms/Input/Input";
-import userService from "src/services/userService"
 
 class RegisterPage extends React.Component {
   render() {

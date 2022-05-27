@@ -8,13 +8,13 @@ import {FaUser} from "react-icons/fa";
 import './header.css';
 import {Link} from "react-router-dom";
 
-export const Header = ({ user, onLogin, onLogout, onCreateAccount }) => (
+export const Header = ({ user, onLogin, onLogout, onCreateAccount, categoriesList }) => (
   <header className="m-header">
     <div className="wrapper">
       <div className="nav-left">
         <img src={image} style={{width: "150px"}}/>
         <a href={'/all-movies'}>All movies</a>
-        <a>Categories</a>
+        <Button color="black" onClick={openNav} label='Categories'/>
         <a href={'/favorites'}>Favorites</a>
       </div>
       <div className="nav-right">
@@ -41,6 +41,14 @@ export const Header = ({ user, onLogin, onLogout, onCreateAccount }) => (
         )}
       </div>
     </div>
+
+    <div id="mySidenav" className="sidenav">
+      <a href="javascript:void(0)" className="closebtn" onClick={closeNav}>&times;</a>
+      <a href={'/all-movies'}>Action</a>
+      <a href={'/all-movies'}>Comedy</a>
+      <a href={'/all-movies'}>Crime</a>
+      <a href={'/all-movies'}>Drama</a>
+    </div>
   </header>
 );
 
@@ -49,8 +57,17 @@ Header.propTypes = {
   onLogin: PropTypes.func.isRequired,
   onLogout: PropTypes.func.isRequired,
   onCreateAccount: PropTypes.func.isRequired,
+  categoriesList: PropTypes.array,
 };
 
 Header.defaultProps = {
   user: null,
 };
+
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}

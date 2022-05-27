@@ -65,3 +65,7 @@
 .buttons-block button:first-child {
     margin-right: 10px;
 }
+
+.rating {
+    font-size: 20px;
+}
